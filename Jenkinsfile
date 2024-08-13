@@ -3,16 +3,16 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID="637423499651"
         AWS_DEFAULT_REGION="us-east-1"
-	    CLUSTER_NAME="pavan"
-	    SERVICE_NAME="kalyan"
-	    TASK_DEFINITION_NAME="pava"
+	    CLUSTER_NAME="aswitha"
+	    SERVICE_NAME="pavani"
+	    TASK_DEFINITION_NAME="midhun"
 	    DESIRED_COUNT="1"
-        IMAGE_REPO_NAME="vit_demo"
+        IMAGE_REPO_NAME="pavan"
         //Do not edit the variable IMAGE_TAG. It uses the Jenkins job build ID as a tag for the new image.
         IMAGE_TAG="${env.BUILD_ID}"
         //Do not edit REPOSITORY_URI.
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
-	    registryCredential = "AWScred"
+	    registryCredential = "5e79e0b0-1c98-4056-bb30-16e5ad57b154"
 	    JOB_NAME = "pipeline-demo"
 	    TEST_CONTAINER_NAME = "${JOB_NAME}-test-server"
     
